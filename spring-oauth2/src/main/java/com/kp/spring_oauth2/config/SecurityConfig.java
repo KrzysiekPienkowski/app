@@ -20,6 +20,7 @@ public class SecurityConfig {
                                 .requestMatchers("/").permitAll()
                                 .anyRequest().authenticated()
                 )
+                .oauth2Login(withDefaults())
                 .formLogin(withDefaults())
                 .build();
     }
